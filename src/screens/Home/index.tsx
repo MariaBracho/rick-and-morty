@@ -1,5 +1,6 @@
 import { componentType } from "@/types/generalTypes";
 import { Link } from "react-router-dom";
+import RickAndMorty from "../../assets/RickAndMorty.jpeg";
 
 export default function Home(): componentType {
   return (
@@ -8,8 +9,8 @@ export default function Home(): componentType {
       <div className="hero min-h-max">
         <div className="hero-content flex-col lg:flex-row">
           <img
-            src="src/assets/RickAndMorty.jpeg"
-            className="max-w-sm rounded-lg shadow-2xl"
+            src={RickAndMorty}
+            className="max-w-sm rounded-lg shadow-2xl w-11/12"
           />
           <div>
             <h1 className="text-5xl font-bold">Rick and Morty</h1>

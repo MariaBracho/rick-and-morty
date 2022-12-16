@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "banner-mobile": "url('./src/assets/banerMobile.jpg')",
-        "banner-desktop": "url('./src/assets/bannerDesktop.jpg')",
+        "banner-mobile": "url('src/assets/banerMobile.jpg')",
+        "banner-desktop": "url('src/assets/bannerDesktop.jpg')",
       },
     },
   },
