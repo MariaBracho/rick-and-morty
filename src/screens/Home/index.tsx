@@ -1,5 +1,4 @@
 import { componentType } from "@/types/generalTypes";
-import RickAndMorty from "../../assets/RickAndMorty.jpeg";
 import { Link } from "react-router-dom";
 
 export default function Home(): componentType {
@@ -8,20 +7,23 @@ export default function Home(): componentType {
       <p className="text-xl font-bold my-4">Home</p>
       <div className="hero min-h-max">
         <div className="hero-content flex-col lg:flex-row">
-          <img src={RickAndMorty} className="max-w-sm rounded-lg shadow-2xl" />
+          <img
+            src="/src/assets/RickAndMorty.jpeg"
+            className="max-w-sm rounded-lg shadow-2xl"
+          />
           <div>
             <h1 className="text-5xl font-bold">Rick and Morty</h1>
             <p className="py-6">
               Rick and Morty is an American adult animated science-fiction
               sitcom created by Justin Roiland and Dan Harmon for Cartoon
-              Network's nighttime programming block Adult Swim. It is
+              Network&s nighttime programming block Adult Swim. It is
               distributed internationally by Warner Bros. Domestic Television.
               The series follows the misadventures of cynical mad scientist Rick
               Sanchez and his good-hearted but fretful grandson Morty Smith, who
               split their time between domestic life and interdimensional
               adventures that take place across an infinite number of realities,
               often travelling to other planets and dimensions through portals
-              and on Rick's flying saucer
+              and on Rick&s flying saucer
             </p>
             <Link to="charater" className="btn btn-primary">
               See charaters

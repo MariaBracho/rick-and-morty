@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2022: true,
     node: true,
   },
   parser: "@typescript-eslint/parser",
@@ -14,7 +14,8 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ["./tsconfig.json", "./vite.config.ts"],
   },
-  plugins: ["react"],
+  plugins: ["react", "@typescript-eslint"],
+  root: true,
   rules: { "react/react-in-jsx-scope": "off" },
   settings: {
     react: {

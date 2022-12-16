@@ -13,5 +13,5 @@ export const getLocalCharacterStorage = ({
 }: {
   key: string;
 }): SingleCharaterCardProps[] | [] => {
-  return JSON.parse(localStorage.getItem(key)) || [];
+  return JSON.parse(localStorage.getItem(key) as string) as [];
 };
