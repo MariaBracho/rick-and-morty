@@ -4,7 +4,7 @@ export interface CharaterInitialStateType {
   status: FetchStatus;
   pages: number;
   charaters: SingleCharaterCardProps[];
-  charatersFavorite: SingleCharaterCardProps[];
+  charatersFavorite: SingleCharaterCardProps[] | [];
 }
 
 export interface SingleCharaterCardProps {
