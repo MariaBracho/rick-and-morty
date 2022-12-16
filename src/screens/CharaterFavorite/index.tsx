@@ -12,7 +12,7 @@ export default function CharaterFavorite(): componentType {
       <Helmet>
         <title>Rick and Morty | favorites</title>
       </Helmet>
-      <CharaterCardGroup title="Favorites" cardList={charaterFavorites} />;
+      <CharaterCardGroup title="Favorites" cardList={charaterFavorites} />
     </>
   );
 }
