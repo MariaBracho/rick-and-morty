@@ -17,19 +17,21 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
-      "@/*":["*"],
-      "@screens/*":["screens/*"],
-      "@styles/*":["styles/*"],
-      "@types/*":["types/*"],
-      "@actions/*":["actions/*"],
-      "@components/*":["components/*"],
-      "@constants/*":["constants/*"],
-      "@hooks/*":["hooks/*"],
-      "@reducers/*":["reducers/*"],
-      "@context/*":["context/*"],
-      "@utils/*":["utils/*"],
+      "@/*": ["*"],
+      "@screens/*": ["screens/*"],
+      "@styles/*": ["styles/*"],
+      "@types/*": ["types/*"],
+      "@actions/*": ["actions/*"],
+      "@components/*": ["components/*"],
+      "@constants/*": ["constants/*"],
+      "@hooks/*": ["hooks/*"],
+      "@reducers/*": ["reducers/*"],
+      "@context/*": ["context/*"],
+      "@assets/*": ["assets/*"],
+      "@utils/*": ["utils/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

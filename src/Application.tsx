@@ -1,20 +1,14 @@
-import { Suspense } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { LoadingBox } from "./components";
-import NotFound from "./screens/NotFount";
+import Navigation from "./navigation";
+import "./styles/main.css";
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
 
-const Application = () => {
-
+const Application = (): JSX.Element => {
   return (
-    <Suspense fallback={<LoadingBox />}>
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LoadingBox />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      </BrowserRouter>
-    </Suspense>
-  )
-}
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
+  );
+};
 
 export default Application;

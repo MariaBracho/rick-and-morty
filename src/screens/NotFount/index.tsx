@@ -1,13 +1,7 @@
-import { LoadingBox } from '@/components'
-import React from 'react'
+import React from "react";
 
-const NotFound = () => {
-  return (
-    <div>
-      <LoadingBox />
-      Not Fount
-    </div>
-  )
-}
+const NotFound: React.FC = () => {
+  return <div>Not Fount</div>;
+};
 
-export default NotFound
+export default NotFound;
