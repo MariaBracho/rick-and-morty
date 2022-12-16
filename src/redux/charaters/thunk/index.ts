@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import getCharaters from "@/adapters/getCharaters";
 import getCharatersFilters from "@/adapters/getCharaterFilters";
+import getSingleCharater from "@/adapters/getSingleCharater";
 
 export const fetchCharaterGroup = createAsyncThunk(
   "charater/fetchCharaterGroup",
@@ -21,6 +22,17 @@ export const fetchCharaterGroupFilters = createAsyncThunk(
   ) => {
     try {
       return await getCharatersFilters({ pages, name });
+    } catch (err) {
+      return rejectWithValue(err);
+    }
+  }
+);
+
+export const fetchCharaterInfo = createAsyncThunk(
+  "charater/fetchCharaterInfo",
+  async ({ id }: { id: number }, { rejectWithValue }) => {
+    try {
+      return await getSingleCharater({ id });
     } catch (err) {
       return rejectWithValue(err);
     }

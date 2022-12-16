@@ -6,7 +6,7 @@ export const MENU_LIST: MenuListProps[] = [
     route: "/",
   },
   {
-    name: "Charater",
+    name: "charater",
     route: "charater",
   },
   {

@@ -10,6 +10,7 @@ import {
   getCardStatus,
 } from "@/redux/charaters/charaterSlice";
 import { FetchStatus } from "@/types/enums";
+import { Helmet } from "react-helmet-async";
 
 // components
 import CardInputSearch from "@/components/CardInputSearch";
@@ -35,6 +36,9 @@ export default function Charater(): componentType {
 
   return (
     <div className="flex flex-col items-center">
+      <Helmet>
+        <title>Rick and Morty | charaters</title>
+      </Helmet>
       <CardInputSearch handledFilter={filter} />
       {isSucces ? (
         <CharaterCardGroup cardList={charaters} title="Charaters" />

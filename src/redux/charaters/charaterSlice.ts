@@ -2,9 +2,14 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {
   CharaterInitialStateType,
   SingleCharaterCardProps,
+  SingleInformationCardProps,
 } from "@/types/models/charaters";
 import { FetchStatus } from "@/types/enums";
-import { fetchCharaterGroup, fetchCharaterGroupFilters } from "./thunk";
+import {
+  fetchCharaterGroup,
+  fetchCharaterGroupFilters,
+  fetchCharaterInfo,
+} from "./thunk";
 import { RootState } from "../store";
 import {
   persistLocalStorage,
@@ -15,6 +20,7 @@ const initialState: CharaterInitialStateType = {
   status: FetchStatus.PENDING,
   pages: 1,
   charaters: [],
+  singleCharater: {},
   charatersFavorite: getLocalCharacterStorage({ key: "charaterFavorites" }),
 };
 
@@ -70,6 +76,19 @@ const charaterSlice = createSlice({
         state.status = FetchStatus.FAILED;
         state.charaters = [];
       });
+    // get charaters info
+    builder
+      .addCase(fetchCharaterInfo.pending, (state) => {
+        state.status = FetchStatus.PENDING;
+      })
+      .addCase(fetchCharaterInfo.fulfilled, (state, action) => {
+        state.status = FetchStatus.SUCCEEDED;
+        state.singleCharater = action.payload;
+      })
+      .addCase(fetchCharaterInfo.rejected, (state) => {
+        state.status = FetchStatus.FAILED;
+        state.singleCharater = {};
+      });
   },
 });
 
@@ -81,6 +100,9 @@ export const getCardStatus = (state: RootState): string =>
   state.charaters.status;
 export const getCharaters = (state: RootState): SingleCharaterCardProps[] =>
   state.charaters.charaters;
+export const getSingleCharater = (
+  state: RootState
+): SingleInformationCardProps | {} => state.charaters.singleCharater;
 export const getCharaterFavorite = (
   state: RootState
 ): SingleCharaterCardProps[] => state.charaters.charatersFavorite;

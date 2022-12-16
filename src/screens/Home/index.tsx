@@ -1,10 +1,14 @@
 import { componentType } from "@/types/generalTypes";
 import { Link } from "react-router-dom";
 import RickAndMorty from "../../assets/RickAndMorty.jpeg";
+import { Helmet } from "react-helmet-async";
 
 export default function Home(): componentType {
   return (
     <>
+      <Helmet>
+        <title>Rick and Morty | home</title>
+      </Helmet>
       <p className="text-xl font-bold my-4">Home</p>
       <div className="hero min-h-max">
         <div className="hero-content flex-col lg:flex-row">
