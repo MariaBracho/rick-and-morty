@@ -11,23 +11,21 @@ import { useParams } from "react-router-dom";
 import Spin from "@/components/Spin";
 import { useEffect } from "react";
 import { FetchStatus } from "@/types/enums";
-import { SingleInformationCardProps } from "@/types/models/charaters";
 
 export default function InfoCard(): componentType {
   const charater = useAppSelector(getSingleCharater);
-  const status = useAppSelector(getCardStatus);
+  const statusFecth = useAppSelector(getCardStatus);
   const dispatch = useAppDispatch();
 
-  const isSucces = status === FetchStatus.SUCCEEDED;
-  const { id } = useParams();
+  const isSucces = statusFecth === FetchStatus.SUCCEEDED;
+  const { id: idCharater } = useParams();
 
   useEffect(() => {
-    const promise = dispatch(fetchCharaterInfo({ id: Number(id) }));
+    const promise = dispatch(fetchCharaterInfo({ id: Number(idCharater) }));
     return (): void => {
       promise.abort();
     };
   }, []);
 
-  const { ...props }: SingleInformationCardProps | {} = charater;
-  return isSucces ? <SingleInfoCard image={image} {...props} /> : <Spin />;
+  return isSucces ? <SingleInfoCard {...charater} /> : <Spin />;
 }

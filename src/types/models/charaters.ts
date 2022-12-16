@@ -4,7 +4,7 @@ export interface CharaterInitialStateType {
   status: FetchStatus;
   pages: number;
   charaters: SingleCharaterCardProps[];
-  singleCharater: SingleInformationCardProps | {};
+  singleCharater: SingleInformationCardProps;
   charatersFavorite: SingleCharaterCardProps[] | [];
 }
 
@@ -17,14 +17,14 @@ export interface SingleCharaterCardProps {
 }
 
 export interface SingleInformationCardProps {
-  image: string;
+  id?: number;
   name: string;
   location: string;
+  image: string;
   gender: string;
   origin: string;
   species: string;
   status: string;
-  id?: number;
 }
 
 export interface charaterProps {

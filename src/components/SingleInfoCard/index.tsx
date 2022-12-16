@@ -3,10 +3,11 @@ import { SingleInformationCardProps } from "@/types/models/charaters";
 import { Helmet } from "react-helmet-async";
 
 export default function SingleInfoCard({
-  image,
+  id,
   name,
-  gender,
   location,
+  image,
+  gender,
   origin,
   species,
   status,

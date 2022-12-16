@@ -20,7 +20,16 @@ const initialState: CharaterInitialStateType = {
   status: FetchStatus.PENDING,
   pages: 1,
   charaters: [],
-  singleCharater: {},
+  singleCharater: {
+    id: 1,
+    name: "",
+    location: "",
+    image: "",
+    gender: "",
+    origin: "",
+    species: "",
+    status: "",
+  },
   charatersFavorite: getLocalCharacterStorage({ key: "charaterFavorites" }),
 };
 
@@ -87,7 +96,6 @@ const charaterSlice = createSlice({
       })
       .addCase(fetchCharaterInfo.rejected, (state) => {
         state.status = FetchStatus.FAILED;
-        state.singleCharater = {};
       });
   },
 });
@@ -102,7 +110,7 @@ export const getCharaters = (state: RootState): SingleCharaterCardProps[] =>
   state.charaters.charaters;
 export const getSingleCharater = (
   state: RootState
-): SingleInformationCardProps | {} => state.charaters.singleCharater;
+): SingleInformationCardProps => state.charaters.singleCharater;
 export const getCharaterFavorite = (
   state: RootState
 ): SingleCharaterCardProps[] => state.charaters.charatersFavorite;
