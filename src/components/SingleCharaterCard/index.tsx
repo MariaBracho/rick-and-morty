@@ -1,8 +1,8 @@
 import { BsFillHeartFill } from "react-icons/bs";
 import { componentType } from "@/types/generalTypes";
-import { SingleCharaterCardProps } from "@/types/models/charaters";
+import { SingleCharaterCardProps } from "@/types/models/characters";
 import useCharaterFavorite from "@/hooks/useCharaterFavorite";
-import DropDownRedes from "../DropDownRedes";
+import DropDownNetworkSocial from "../DropDownNetworkSocial";
 import { Link } from "react-router-dom";
 
 export default function SingleCharaterCard({
@@ -17,7 +17,7 @@ export default function SingleCharaterCard({
   });
   return (
     <div className="w-40 h-48">
-      <Link to={`/charater/${id}`}>
+      <Link to={`/character/${id}`}>
         <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
           <img
             className="absolute h-full w-full top-0 right-0 object-cover"
@@ -45,7 +45,7 @@ export default function SingleCharaterCard({
           } h-6 w-6 cursor-pointer`}
           onClick={handledFavorite}
         />
-        <DropDownRedes cardImage={image} />
+        <DropDownNetworkSocial cardImage={image} />
       </div>
     </div>
   );

@@ -1,21 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { componentType } from "@/types/generalTypes";
 
-// components
-import Charater from "@/screens/Charater";
+// screens
+import Character from "@/screens/Character";
 import Layout from "@/components/Layout";
-import CharaterFavorite from "@/screens/CharaterFavorite";
+import CharacterFavorite from "@/screens/CharacterFavorite";
 import Home from "@/screens/Home";
-import InfoCard from "@/screens/InfoCard";
+import Characterdetail from "@/screens/Characterdetail";
 
-export default function Navigation(): JSX.Element {
+export default function Navigation(): componentType {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/charater" element={<Charater />} />
-          <Route path="/favorites" element={<CharaterFavorite />} />
-          <Route path="/charater/:id" element={<InfoCard />} />
+          <Route path="/characters" element={<Character />} />
+          <Route path="/favorites" element={<CharacterFavorite />} />
+          <Route path="/character/:id" element={<Characterdetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

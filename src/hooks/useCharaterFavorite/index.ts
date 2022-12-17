@@ -6,7 +6,7 @@ import {
   deleteFavorite,
   getCharaterFavorite,
 } from "@/redux/charaters/charaterSlice";
-import { SingleCharaterCardProps } from "@/types/models/charaters";
+import { SingleCharaterCardProps } from "@/types/models/characters";
 
 interface returnCharateFavorite {
   handledFavorite: () => void;

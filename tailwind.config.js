@@ -3,12 +3,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {
-      backgroundImage: {
-        "banner-mobile": "url('./src/assets/banerMobile.jpg')",
-        "banner-desktop": "url('./src/assets/bannerDesktop.jpg')",
-      },
-    },
+    extend: {},
   },
   plugins: [require("daisyui")],
   daisyui: {

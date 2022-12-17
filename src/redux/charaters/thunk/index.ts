@@ -1,10 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import getCharaters from "@/adapters/getCharaters";
-import getCharatersFilters from "@/adapters/getCharaterFilters";
-import getSingleCharater from "@/adapters/getSingleCharater";
+import getCharaters from "@/adapters/getCharacters";
+import getCharatersFilters from "@/adapters/getCharacterFilters";
+import getCharacterDetail from "@/adapters/getCharacterDetail";
 
 export const fetchCharaterGroup = createAsyncThunk(
-  "charater/fetchCharaterGroup",
+  "character/fetchCharaterGroup",
   async ({ pages }: { pages: number }, { rejectWithValue }) => {
     try {
       return await getCharaters({ pages });
@@ -15,7 +15,7 @@ export const fetchCharaterGroup = createAsyncThunk(
 );
 
 export const fetchCharaterGroupFilters = createAsyncThunk(
-  "charater/fetchCharaterGroupFilters",
+  "character/fetchCharaterGroupFilters",
   async (
     { pages, name }: { pages: number; name: string },
     { rejectWithValue }
@@ -29,10 +29,10 @@ export const fetchCharaterGroupFilters = createAsyncThunk(
 );
 
 export const fetchCharaterInfo = createAsyncThunk(
-  "charater/fetchCharaterInfo",
+  "character/fetchCharaterInfo",
   async ({ id }: { id: number }, { rejectWithValue }) => {
     try {
-      return await getSingleCharater({ id });
+      return await getCharacterDetail({ id });
     } catch (err) {
       return rejectWithValue(err);
     }

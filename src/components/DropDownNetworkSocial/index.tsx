@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { componentType } from "@/types/generalTypes";
 import {
   BsFillShareFill,
@@ -5,9 +6,8 @@ import {
   BsPinterest,
   BsWhatsapp,
 } from "react-icons/bs";
-import { useState } from "react";
 
-export default function DropDownRedes({
+export default function DropDownNetworkSocial({
   cardImage,
 }: {
   cardImage: string;
@@ -21,18 +21,18 @@ export default function DropDownRedes({
   return (
     <div className="relative">
       <BsFillShareFill
-        className="text-primary h-6 w-6 cursor-pointer"
+        className="socialNetworkIcon"
         onClick={handledDropDown}
       />
       {showDropDown && (
-        <div className="menu opacity-100 visible menu-compact absolute mt-2 p-2 shadow bg-base-200 rounded-box w-52 right-0 z-20 flex flex-row justify-around">
+        <div className="dropDownNetworkSocial">
           <li className="w-min">
             <a
               target="_blank"
               href={`https://www.facebook.com/sharer/sharer.php?u=${cardImage}`}
               rel="noopener noreferrer"
             >
-              <BsFacebook className="text-primary h-6 w-6 cursor-pointer" />
+              <BsFacebook className="socialNetworkIcon" />
             </a>
           </li>
           <li className="w-min">
@@ -41,7 +41,7 @@ export default function DropDownRedes({
               href={`https://pinterest.com/pin/create/button/?media=${cardImage}`}
               rel="noopener noreferrer"
             >
-              <BsPinterest className="text-primary h-6 w-6 cursor-pointer" />
+              <BsPinterest className="socialNetworkIcon" />
             </a>
           </li>
           <li className="w-min">
@@ -50,7 +50,7 @@ export default function DropDownRedes({
               href={`whatsapp://send?text=${cardImage}`}
               rel="noopener noreferrer"
             >
-              <BsWhatsapp className="text-primary h-6 w-6 cursor-pointer" />
+              <BsWhatsapp className="socialNetworkIcon" />
             </a>
           </li>
         </div>

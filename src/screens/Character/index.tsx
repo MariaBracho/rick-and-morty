@@ -1,16 +1,25 @@
-import { componentType } from "@/types/generalTypes";
 import { useEffect } from "react";
-import { useAppDispatch } from "@/hooks/useAppDispatch";
-import { useAppSelector } from "@/hooks/useAppSelector";
+import { Helmet } from "react-helmet-async";
+
+// redux
 import { fetchCharaterGroup } from "@/redux/charaters/thunk";
-import { useFilterCharater } from "@/hooks/useFilterCharater";
 import {
   getCharaters,
   getPages,
   getCardStatus,
 } from "@/redux/charaters/charaterSlice";
+
+// utils
+import { HELMET_TITLE } from "@/utilities/constants/helmetTitle";
+
+// types
 import { FetchStatus } from "@/types/enums";
-import { Helmet } from "react-helmet-async";
+import { componentType } from "@/types/generalTypes";
+
+// hooks
+import { useAppDispatch } from "@/hooks/useAppDispatch";
+import { useFilterCharater } from "@/hooks/useFilterCharater";
+import { useAppSelector } from "@/hooks/useAppSelector";
 
 // components
 import CardInputSearch from "@/components/CardInputSearch";
@@ -18,7 +27,7 @@ import CharaterCardGroup from "@/components/CharaterCardGroup";
 import Pagination from "@/components/Pagination.tsx";
 import Spin from "@/components/Spin";
 
-export default function Charater(): componentType {
+export default function Character(): componentType {
   const charaters = useAppSelector(getCharaters);
   const pages = useAppSelector(getPages);
   const status = useAppSelector(getCardStatus);
@@ -37,7 +46,7 @@ export default function Charater(): componentType {
   return (
     <div className="flex flex-col items-center">
       <Helmet>
-        <title>Rick and Morty | charaters</title>
+        <title>{HELMET_TITLE.characters}</title>
       </Helmet>
       <CardInputSearch handledFilter={filter} />
       {isSucces ? (

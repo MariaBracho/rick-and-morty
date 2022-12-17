@@ -1,4 +1,4 @@
-import { SingleCharaterCardProps } from "@/types/models/charaters";
+import { SingleCharaterCardProps } from "@/types/models/characters";
 
 export const persistLocalStorage = <T>(key: string, value: T): void => {
   localStorage.setItem(key, JSON.stringify(value));

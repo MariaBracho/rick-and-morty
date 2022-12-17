@@ -3,7 +3,7 @@ import {
   CharaterInitialStateType,
   SingleCharaterCardProps,
   SingleInformationCardProps,
-} from "@/types/models/charaters";
+} from "@/types/models/characters";
 import { FetchStatus } from "@/types/enums";
 import {
   fetchCharaterGroup,
@@ -34,7 +34,7 @@ const initialState: CharaterInitialStateType = {
 };
 
 const charaterSlice = createSlice({
-  name: "charaters",
+  name: "characters",
   initialState,
   reducers: {
     previouspage: (state) => {
@@ -102,6 +102,8 @@ const charaterSlice = createSlice({
 
 export const { previouspage, nextPage, addFavorite, deleteFavorite } =
   charaterSlice.actions;
+
+// get states
 
 export const getPages = (state: RootState): number => state.charaters.pages;
 export const getCardStatus = (state: RootState): string =>

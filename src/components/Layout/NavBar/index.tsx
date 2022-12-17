@@ -1,5 +1,5 @@
-import { componentType } from "@/types/generalTypes";
 import { useState } from "react";
+import { componentType } from "@/types/generalTypes";
 import { HiMenu } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
 import { MENU_LIST } from "@/utilities/constants/menuList";

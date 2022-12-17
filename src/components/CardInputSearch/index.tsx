@@ -17,6 +17,7 @@ export default function CardInputSearch({
       <input
         tabIndex={0}
         className="w-4/5 outline-none border-none bg-transparent"
+        placeholder="Search characters"
         type="text"
         onChange={handledFilter}
       />

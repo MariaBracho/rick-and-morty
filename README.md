@@ -1,14 +1,21 @@
-This is a complete solution, a framework to create a web application of all sizes, with a beautiful development experience and flexible routing based on file systems and the FLUX design pattern.
+# Rick and morty page
 
-This is a project template for React apps.
+<table>
+<tr>
+<td>
+Rick and Morty page is an app for look characters cards, save in favorite and shared with friends.
+</td>
+</tr>
+</table>
 
-To create a new project based on this template use:
+## Site
+![](./src/assets/images/screenShop.PNG)
 
 #### Get started
 
 Install dependencies
 ```
-  cd react-project-template
+  cd rick-and-morty
   npm install or yard install
 ```
 Run project
@@ -19,8 +26,24 @@ or
 ```
   yarn dev
 ```
+## Demo
 
-#### Regular dependencies
-- redux
-- react-router-dom
-- vite
+Here is a working live demo : https://rick-and-morty-lbjs.vercel.app/
+
+## API
+
+Rick and Morty API :  https://rickandmortyapi.com/
+
+## Construido con 🛠️
+
+* [TypeScript](https://www.typescriptlang.org/docs/)
+* [Tailwind](https://tailwindcss.com/)
+* [DaisyUI](https://daisyui.com/)
+* [Axios](https://axios-http.com/)
+* [Redux toolkit](https://redux-toolkit.js.org/)
+* [React router ](https://reactrouter.com/en/main)
+* [React icons](https://react-icons.github.io/react-icons)
+* [react-helmet-async](https://www.npmjs.com/package/react-helmet-async)
+* [Vite](https://vitejs.dev/)
+
+

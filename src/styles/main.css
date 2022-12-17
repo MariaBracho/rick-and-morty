@@ -12,6 +12,15 @@
   }
 }
 
+@layer components {
+  .socialNetworkIcon {
+    @apply text-primary h-6 w-6 cursor-pointer;
+  }
+  .dropDownNetworkSocial {
+    @apply menu opacity-100 visible menu-compact absolute mt-2 p-2 shadow bg-base-200 rounded-box w-52 right-0 z-20 flex flex-row justify-around;
+  }
+}
+
 @layer utilities {
   .bg-linearBase-100 {
     background: linear-gradient(

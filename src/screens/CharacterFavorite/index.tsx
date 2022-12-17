@@ -3,16 +3,20 @@ import CharaterCardGroup from "@/components/CharaterCardGroup";
 import { useAppSelector } from "@/hooks/useAppSelector";
 import { getCharaterFavorite } from "@/redux/charaters/charaterSlice";
 import { Helmet } from "react-helmet-async";
+import { HELMET_TITLE } from "@/utilities/constants/helmetTitle";
 
-export default function CharaterFavorite(): componentType {
+export default function CharacterFavorite(): componentType {
   const charaterFavorites = useAppSelector(getCharaterFavorite);
 
   return (
     <>
       <Helmet>
-        <title>Rick and Morty | favorites</title>
+        <title>{HELMET_TITLE.favoriteCharacters}</title>
       </Helmet>
-      <CharaterCardGroup title="Favorites" cardList={charaterFavorites} />
+      <CharaterCardGroup
+        title="Characters favorites"
+        cardList={charaterFavorites}
+      />
     </>
   );
 }

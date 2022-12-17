@@ -2,7 +2,7 @@ import { instance } from "../config/axiosInstace";
 import {
   SingleCharaterCardProps,
   charaterProps,
-} from "@/types/models/charaters";
+} from "@/types/models/characters";
 
 interface CharatersFilters {
   name: string;
