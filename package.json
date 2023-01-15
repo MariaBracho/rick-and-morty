@@ -9,6 +9,12 @@
     "lint": "eslint src/**/*.ts src/**/*.tsx",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nevobit/react-typescript-template"
+  },
+  "author": "Nestor Mosquera",
+  "license": "MIT",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.4",
     "eslint-plugin-react": "^7.31.10",
