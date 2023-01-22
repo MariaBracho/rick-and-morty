@@ -1,13 +1,20 @@
 {
-  "name": "react-typescript-template",
-  "private": true,
-  "version": "0.1.0",
+  "name": "@nevobit/react-typescript-template-nevobit",
+  "version": "1.0.0",
+  "description": "This is a complete solution, a framework to create a web application of all sizes, with a beautiful development experience and flexible routing based on file systems and the FLUX design pattern.",
+  "bin": "./bin/cli.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "eslint": "eslint . --fix"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nevobit/react-typescript-template"
+  },
+  "author": "Nestor Mosquera",
+  "license": "MIT",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.4",
     "axios": "^1.2.1",
