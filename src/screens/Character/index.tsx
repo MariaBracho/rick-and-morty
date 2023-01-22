@@ -43,6 +43,8 @@ export default function Character(): componentType {
     };
   }, [pages]);
 
+  console.log(charaters);
+
   return (
     <div className="flex flex-col items-center">
       <Helmet>
