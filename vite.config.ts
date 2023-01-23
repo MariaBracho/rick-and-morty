@@ -5,7 +5,8 @@ import * as path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: "https://github.com/MariaBracho/rick-and-morty",
   resolve: {
-    alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
-  },
+    alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }]
+  }
 });

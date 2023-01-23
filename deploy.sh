@@ -24,3 +24,4 @@ git commit -m 'deploy'
 
 git push -f git@github.com:MariaBracho/rick-and-morty.git main:gh-pages
 
+cd -
