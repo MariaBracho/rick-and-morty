@@ -1,4 +1,4 @@
-import { instance } from "../config/axiosInstace";
+import { instance } from "@/config/axiosInstace";
 import { SingleInformationCardProps } from "@/types/models/characters";
 
 export default async function getCharacterDetail({

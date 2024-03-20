@@ -3,24 +3,23 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  parser: "@typescript-eslint/parser",
   settings: {
     react: {
       version: "detect"
     }
   },
   extends: [
-    "plugin:react/recommended",
     "eslint:recommended",
+    "plugin:react/recommended",
     "standard-with-typescript",
     "prettier"
   ],
   overrides: [],
   parserOptions: {
+    parser: "@typescript-eslint/parser",
     ecmaVersion: "latest",
     sourceType: "module",
-    tsconfigRootDir: __dirname,
-    project: ["./tsconfig.json", "./vite.config.ts"]
+    project: "tsconfig.json"
   },
   plugins: ["react"],
   rules: {
